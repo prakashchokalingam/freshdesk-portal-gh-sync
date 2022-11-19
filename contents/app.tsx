@@ -9,6 +9,7 @@ import configIcon from "data-base64:~assets/config.svg";
 import cancelIcon from "data-base64:~assets/cancel.svg";
 import helpIcon from "data-base64:~assets/help.svg";
 import syncIcon from "data-base64:~assets/sync.svg";
+import icon from "data-base64:~assets/icon.png";
 
 // components
 import { Onboard } from "~components/app/onboard";
@@ -82,7 +83,7 @@ const App = () => {
       <div className="sync-modal">
         <div className="flex justify-between items-center py-5 px-5 shadow-md">
           <h2 className="text-2xl text-white font-bold tracking-wider">
-            Freshdesk Portal Github Sync
+            <img src={icon} className="w-16 inline-block" /> Freshdesk Portal Github Sync
           </h2>
           <div>
             {(currentView !== AppViews.ONBOARD) && <button className="mr-10 sync-icon hint--top" aria-label="Sync" onClick={() => setCurrentView(AppViews.SYNC)}> <img src={syncIcon} /> </button> }
@@ -160,7 +161,7 @@ const decideView = async (
 }
 
 const setView = (accountConfig: string, portalConfig: PortalConfig, setCurrentView) => {
-  if (!accountConfig || !portalConfig.owner || !portalConfig.repo) {
+  if (!accountConfig || !portalConfig?.owner || !portalConfig?.repo) {
     setCurrentView(AppViews.ONBOARD);
   } else {
     setCurrentView(AppViews.SYNC);

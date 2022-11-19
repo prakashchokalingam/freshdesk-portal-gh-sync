@@ -1,15 +1,11 @@
-import { useState } from "react"
+import { useEffect } from "react"
 
 function IndexPopup() {
-  const [data, setData] = useState("")
-
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        padding: 16
-      }}>
+    <div style={{ width: 'max-content' }}>
+      <h2>Freshdesk Portal Github Sync</h2>
+      <p><a href="https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/issues" target="_blank">View on Github</a></p>
+      <p><a href="https://github.com/prakashchokalingam/freshdesk-portal-gh-sync" target="_blank">Raise an issue</a></p>
     </div>
   )
 }
