@@ -2,13 +2,13 @@ import type { PlasmoContentScript, PlasmoGetInlineAnchor } from "plasmo"
 
 // assets
 import cssText from "data-text:~/styles/trigger.css"
-import github from "data-base64:~assets/github.png"
+import github from "data-base64:~assets/ghwhite.png"
 
 import { TRIGGER_FD_GH_SYNC_APP } from "~constants";
 
 // plastmo contents
 export const config: PlasmoContentScript = {
-  matches: ["https://*.freshdesk.com/a/admin/portals/*"],
+  matches: ["https://*/a/admin/portals/*/themes/*"],
 }
 
 export const getInlineAnchor: PlasmoGetInlineAnchor = () =>
@@ -27,9 +27,9 @@ export const getStyle = () => {
 // component
 const Trigger = () => {
   return <div>
-    <button className="sync-btn-style" title="Update changes to github">
+    <button className="sync-btn-style" title="sync your code changes to github" onClick={openApp}>
       <img src={github} className="gh-trigger-icon" alt="Github sync" />
-      <span onClick={openApp}> Sync to Github </span>
+      <span> Sync to Github </span>
     </button>
   </div>
 }

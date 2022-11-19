@@ -1,3 +1,9 @@
+@import url('./hint.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .sync-overflow {
   position: fixed;
   bottom: 0;
@@ -17,17 +23,9 @@
   background: linear-gradient(180deg, rgba(183, 52, 179, 0.15) 0%, rgba(164, 46, 156, 0) 100%), #6e40c9 !important;
   z-index: 100;
   box-shadow: 0 4px 24px #ebeef0;
-  color: #fff;
 }
 
-.navbar {
-  display: flex;
-  /* border-bottom: 1px solid black; */
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  padding: 0 32px;
-  justify-content: space-around;
-}
-
-.sync-view {
-  padding: 0 32px;
+.sync-icon {
+  height: 28px;
+  width: 28px;
 }

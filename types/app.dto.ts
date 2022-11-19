@@ -4,9 +4,12 @@ interface CurrentAccount {
   domain: string;
 }
 
-interface ThemeInfo {
-  portal: string;
-  theme: string;
+interface CurrentPortal extends CurrentAccount {
+}
+
+interface PortalConfig {
+  owner: string;
+  repo: string;
 }
 
 enum AppViews {
@@ -15,13 +18,13 @@ enum AppViews {
   SYNC = 'sync'
 }
 
-
 export {
   AppViews
 };
 
 export type {
   CurrentAccount,
-  ThemeInfo
+  CurrentPortal,
+  PortalConfig,
 };
 
