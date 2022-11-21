@@ -2,7 +2,49 @@
 
 # Fresdesk Portal Github Sync
 
-Sync your Freshdesk portal's themes code changes to your github repo
+Sync Freshdesk portal's themes code changes to your github repo
+
+#### Download
+
+> This addon is not available on the browser addon stores. [Click here to download](Click here to download).
+
+
+
+#### Click here for the steps to install this addon on your browser
+
+### Addon usage
+
+##### Access
+<table>
+<tr>
+  <td>
+    <img width="1000" alt="sync-to-github" src="https://user-images.githubusercontent.com/5512765/203072198-158b64f2-feb0-4946-aac6-31b8a9d8b355.png"> </td>
+  </td>
+  <td>Once installed, The Github Sync button will start appear on your freshdesk portal theme customisation page</td>
+</tr>
+</table>
+
+##### Config
+Provide config settings like github access token and repository details to perform the sync.
+
+> Note: All your secret tokens will be stored in the browser's addon storage securely. [click here to know more about storages](https://developer.chrome.com/docs/extensions/reference/storage/).
+
+<table>
+<tr>
+ <td>Ensure the token has access to commit changes on the default branch of the given repo.</td>
+ <td><img width="1536" alt="gh-token" src="https://user-images.githubusercontent.com/5512765/203077325-5a11c920-05be-49d0-9637-f88d553eb6d9.png"></td>
+</tr>
+<tr>
+  <td><img width="1536" alt="repo" src="https://user-images.githubusercontent.com/5512765/203078757-a94638ff-b512-42f1-b646-e98c0103704b.png"></td>
+   <td>Make sure the repo is not empty and has a default branch.</td>
+</tr>
+<tr>
+<td>Update your configuration details anytime using the config option</td>
+<td>
+<img width="1536" alt="config" src="https://user-images.githubusercontent.com/5512765/203083568-a28ed4c4-28ca-4864-9105-a5a70a98ebcd.png">
+</td>
+</tr>
+</table>
 
 
 
