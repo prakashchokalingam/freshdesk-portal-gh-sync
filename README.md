@@ -1,3 +1,13 @@
+<img width="250" alt="Screenshot_2022-11-19_at_10 55 41_PM-removebg-preview (1)" src="https://user-images.githubusercontent.com/5512765/203060603-55b3e1d7-46cc-4057-8511-4e081801367f.png">
+
+# Fresdesk Portal Github Sync
+
+Sync your Freshdesk portal's themes code changes to your github repo
+
+
+
+# About this project
+
 This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
 
 ## Getting Started
