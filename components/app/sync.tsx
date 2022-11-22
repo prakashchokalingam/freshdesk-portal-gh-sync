@@ -54,7 +54,7 @@ const Sync = (props: iProps) => {
   }, []);
 
 
-  return <div className="flex justify-center mt-10">
+  return <div className="flex justify-center mt-10 pt-10">
     {!currentTheme && Loader()}
 
     {
@@ -186,7 +186,7 @@ const getTree = async (theme: any, owner: string, repo: string, baseTree: string
   commitTree.add('meta', JSON.stringify({
     name: theme.name,
     base_theme: theme.reference
-  }));
+  }, null, 4));
 
   // preferences
   const preferences = Object.keys(theme).reduce((obj, key) => {
@@ -194,7 +194,7 @@ const getTree = async (theme: any, owner: string, repo: string, baseTree: string
 
     return obj;
   }, {});
-  commitTree.add('preferences', JSON.stringify(preferences));
+  commitTree.add('preferences', JSON.stringify(preferences, null, 4));
 
   // layout & css files
   LAYOUTS.forEach((layout) => {

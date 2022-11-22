@@ -19,8 +19,8 @@ const PortalConfig = (props: iProps) => {
   const [repo, setRepo] = useState<string>('');
 
   useEffect(() => {
-    setOwner(props.repoOwner);
-    setRepo(props.repoName);
+    setOwner(props.repoOwner || '');
+    setRepo(props.repoName || '');
   }, [props.repoOwner])
 
   return <div className="flex justify-center mt-3">
