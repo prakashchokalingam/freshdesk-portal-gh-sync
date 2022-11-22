@@ -10,7 +10,9 @@ This addon includes [content scripts](https://developer.chrome.com/docs/extensio
 
 # Download
 
-> This addon is not available on any browser stores. You can download directly from  [Click here to download](Click here to download).
+> This addon is not available on any browser stores. You can download directly using below links
+
+⬇️ [download for chrome](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/releases/download/v0.1/sync.chrome-mv3-prod.zip) ⬇️ [download for firefox](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/releases/download/v0.1/sync.firefox-mv2-prod.zip)
 
 
 
