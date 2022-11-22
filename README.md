@@ -16,7 +16,7 @@ This addon includes [content scripts](https://developer.chrome.com/docs/extensio
 
 # Install
 
-Refer the below links for the steps to install this addon on your browser
+Refer the below links for the steps to install this addon to your browser
 
 [Chrome Installation Guide](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/wiki/Chrome-installation-steps) | [Firefox Installtion Guide](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/wiki/Firefox-installation-steps)
 
