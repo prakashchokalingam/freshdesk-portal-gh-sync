@@ -4,17 +4,21 @@
 
 Sync Freshdesk portal's themes code changes to your github repo
 
-#### Download
+# How?
 
-> This addon is not available on the browser addon stores. [Click here to download](Click here to download).
+This addon includes [content scripts](https://developer.chrome.com/docs/extensions/mv3/content_scripts/) to the portal customisation page and triggers the [freshdesk internal api's](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/blob/d0d731e5ad486ea05428a7a16e4737b2d7794cb8/constants/index.ts#L3) to fetch the template details and converts the data into freshdesk portal's import supported theme bundle.
+
+# Download
+
+> This addon is not available on any browser stores. You can download directly from  [Click here to download](Click here to download).
 
 
 
 #### Click here for the steps to install this addon on your browser
 
-### Addon usage
+# Usage
 
-##### Access
+### Access
 <table>
 <tr>
   <td>
@@ -24,14 +28,14 @@ Sync Freshdesk portal's themes code changes to your github repo
 </tr>
 </table>
 
-##### Config
+### Config
 Provide config settings like github access token and repository details to perform the sync.
 
 > Note: All your secret tokens will be stored in the browser's addon storage securely. [click here to know more about storages](https://developer.chrome.com/docs/extensions/reference/storage/).
 
 <table>
 <tr>
- <td>Ensure the token has access to commit changes on the default branch of the given repository.</td>
+ <td>Ensure the token has access to commit changes on the default branch of the given repo.</td>
  <td><img width="1536" alt="gh-token" src="https://user-images.githubusercontent.com/5512765/203077325-5a11c920-05be-49d0-9637-f88d553eb6d9.png"></td>
 </tr>
 <tr>
@@ -39,47 +43,42 @@ Provide config settings like github access token and repository details to perfo
    <td>Make sure the repo is not empty and has a default branch.</td>
 </tr>
 <tr>
-<td>Update your configuration details anytime using the config option</td>
+  <td>Update your configuration details anytime using the config option</td>
 <td>
-<img width="1536" alt="config" src="https://user-images.githubusercontent.com/5512765/203083568-a28ed4c4-28ca-4864-9105-a5a70a98ebcd.png">
+  <img width="1536" alt="config" src="https://user-images.githubusercontent.com/5512765/203083568-a28ed4c4-28ca-4864-9105-a5a70a98ebcd.png">
 </td>
 </tr>
 </table>
 
+### Sync
+
+All set, the addon is now ready sync the theme code changes to your github repository. Provide a commit message to describe the change and sync it.
+
+<img width="1536" alt="gh-sync" src="https://user-images.githubusercontent.com/5512765/203238794-fbd866c4-3887-41c4-9473-8f8d753c1ed2.png">
+
+
+> The files will be pushed to the repository under theme folder i.e `theme_id/files`. And the theme folder is import compatible, hence you can zip the theme folder and upload it to the freshdesk portal as a new theme.
 
 
 # About this project
 
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+This addon was built using the following opensource dependencies,
+* [plasmo](https://plasmo.com/)
+* [octokit/rest.js](https://github.com/octokit/rest.js/)
+* [reactjs](https://reactjs.org/)
+* [tailwindcss](https://tailwindcss.com/)
+* [hint.css](https://github.com/chinchang/hint.css)
+* [react-confetti](https://github.com/alampros/react-confetti)
+
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-pnpm dev
-# or
 npm run dev
 ```
 
 Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
-```bash
-pnpm build
-# or
-npm run build
-```
-
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/workflows/submit) and you should be on your way for automated submission!
+For further guidance, [visit plasmo Documentation](https://docs.plasmo.com/).
