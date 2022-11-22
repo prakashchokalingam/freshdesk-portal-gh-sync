@@ -1,7 +1,11 @@
+<a href="https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/releases">![version](https://img.shields.io/badge/addon-v0.1-brightgreen)</a>
+<a href="https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/releases/download/v0.1/sync.chrome-mv3-prod.zip">![download addon for chrome](https://img.shields.io/badge/download%20for-chrome-brightgreen?logo=Google%20Chrome&logoColor=white)</a>
+<a href="https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/releases/download/v0.1/sync.firefox-mv2-prod.zip">![download addon for addon](https://img.shields.io/badge/download%20for-firefox-brightgreen?logo=Firefox%20Browser&logoColor=white)</a>
+![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
+
 <img width="250" alt="Screenshot_2022-11-19_at_10 55 41_PM-removebg-preview (1)" src="https://user-images.githubusercontent.com/5512765/203060603-55b3e1d7-46cc-4057-8511-4e081801367f.png">
 
 # Fresdesk Portal Github Sync
-
 Sync Freshdesk portal's themes code changes to your github repo
 
 # How?
