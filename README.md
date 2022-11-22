@@ -14,9 +14,11 @@ This addon includes [content scripts](https://developer.chrome.com/docs/extensio
 
 ⬇️ [download for chrome](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/releases/download/v0.1/sync.chrome-mv3-prod.zip) ⬇️ [download for firefox](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/releases/download/v0.1/sync.firefox-mv2-prod.zip)
 
+# Install
 
+Refer the below links for the steps to install this addon on your browser
 
-#### Click here for the steps to install this addon on your browser
+[Chrome Installation Guide](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/wiki/Chrome-installation-steps) | [Firefox Installtion Guide](https://github.com/prakashchokalingam/freshdesk-portal-gh-sync/wiki/Firefox-installation-steps)
 
 # Usage
 
