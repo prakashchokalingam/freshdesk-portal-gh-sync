@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { Storage } from "@plasmohq/storage"
+import { useState } from "react";
+import { Storage } from "@plasmohq/storage";
 
-import github from "data-base64:~assets/ghwhite.png"
-import type { CurrentAccount } from "../../../types/app.dto"
+import github from "data-base64:~assets/ghwhite.png";
+import type { CurrentAccount } from "../../../types/app.dto";
 
 interface iProps {
   currentAccount: CurrentAccount
@@ -70,4 +70,4 @@ const saveToken = async (currentAccount: string, token: string, onSetToken) => {
 
 export {
   TokenConfig
-}
+};

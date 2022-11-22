@@ -1,8 +1,9 @@
-import type { PlasmoContentScript, PlasmoGetInlineAnchor } from "plasmo";
 import { useEffect, useState } from "react";
+import type { PlasmoContentScript, PlasmoGetInlineAnchor } from "plasmo";
 import { Storage } from "@plasmohq/storage";
 
 import { INTERNAL_APIS, TRIGGER_FD_GH_SYNC_APP } from "~constants";
+
 import cssText from "data-text:~/styles/app.css";
 
 import configIcon from "data-base64:~assets/config.svg";
@@ -32,19 +33,19 @@ const CONFIG_DEFAULT_VALUE: PortalConfig = {
 // plastmo contents
 export const config: PlasmoContentScript = {
   matches: ["https://*/a/admin/portals/*/themes/*"],
-}
+};
 
 export const getInlineAnchor: PlasmoGetInlineAnchor = () =>
-  document.querySelector(".footer-wrapper .footer")
+  document.querySelector(".footer-wrapper .footer");
 
 
-export const getShadowHostId = () => "fd-sync-trigger"
+export const getShadowHostId = () => "fd-sync-app";
 
 export const getStyle = () => {
-  const style = document.createElement("style")
-  style.textContent = cssText
-  return style
-}
+  const style = document.createElement("style");
+  style.textContent = cssText;
+  return style;
+};
 
 
 // component
@@ -53,8 +54,8 @@ const App = () => {
   const [currentView, setCurrentView] = useState<AppViews>(null);
   const [currentAccount, setCurrentAccount] = useState<CurrentAccount>(DEFAULT_VALUES);
   const [currentPortal, setCurrentPortal] = useState<CurrentPortal>(DEFAULT_VALUES);
-  const [currentTokenConfig, setCurrentTokenConfig] = useState<string>(null)
-  const [currentPortalConfig, setCurrentPortalConfig] = useState<PortalConfig>(CONFIG_DEFAULT_VALUE)
+  const [currentTokenConfig, setCurrentTokenConfig] = useState<string>(null);
+  const [currentPortalConfig, setCurrentPortalConfig] = useState<PortalConfig>(CONFIG_DEFAULT_VALUE);
   const [currentTheme, setTheme] = useState<string>(null);
 
 

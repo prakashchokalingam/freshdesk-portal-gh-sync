@@ -1,7 +1,8 @@
-import type { CurrentAccount, CurrentPortal, PortalConfig as PortalConfigType } from "../../../types/app.dto"
-import freshdesk from "data-base64:~assets/freshdesk.png"
-import { useEffect, useState } from "react"
-import { Storage } from "@plasmohq/storage"
+import { useEffect, useState } from "react";
+import { Storage } from "@plasmohq/storage";
+
+import freshdesk from "data-base64:~assets/freshdesk.png";
+import type { CurrentAccount, CurrentPortal } from "../../../types/app.dto";
 
 interface iProps {
   currentAccount: CurrentAccount;
@@ -13,9 +14,7 @@ interface iProps {
   toggleReadOnly?: Function;
 }
 
-
 const PortalConfig = (props: iProps) => {
-
   const [owner, setOwner] = useState<string>('');
   const [repo, setRepo] = useState<string>('');
 
@@ -27,7 +26,7 @@ const PortalConfig = (props: iProps) => {
   return <div className="flex justify-center mt-3">
     <div className="text-center">
       <img src={freshdesk} className="h-20 inline-block mb-5" />
-      <h2 className="text-2xl text-white">Set <b>Github repo</b> for the portal({props.currentPortal.id}):</h2>
+      <h2 className="text-2xl text-white">Set <b>Github repo</b> for the portal ({props.currentPortal.id}):</h2>
       <h3 className="text-1xl text-white pt-2 font-bold">
         {props.currentPortal.name} ({props.currentPortal.domain})
       </h3>
@@ -42,7 +41,7 @@ const PortalConfig = (props: iProps) => {
               className="p-5 text-2xl font-bold tracking-wider placeholder:text-slate-400"
               placeholder="owner (or) org name"
               value={owner}
-              onChange={(e) => { console.log('called'); setOwner(e.target.value) }}
+              onChange={(e) => { setOwner(e.target.value) }}
               required
             />
             <span className="p-5 text-2xl bg-white font-bold tracking-wider">/</span>
@@ -87,7 +86,7 @@ const PortalConfig = (props: iProps) => {
 
     </div>
   </div>
-}
+};
 
 const saveRepo = async (
   portalId: string,
@@ -107,4 +106,4 @@ const saveRepo = async (
 
 export {
   PortalConfig
-}
+};

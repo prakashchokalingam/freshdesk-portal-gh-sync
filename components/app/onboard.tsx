@@ -1,9 +1,10 @@
-import type { CurrentAccount, PortalConfig as PortalConfigType, CurrentPortal } from "../../types/app.dto";
-import { TokenConfig } from "./config/token";
-import { PortalConfig } from './config/portal';
 import { useState } from "react";
 import Confetti from 'react-confetti';
+
 import done from "data-base64:~assets/done.svg";
+import { TokenConfig } from "./config/token";
+import { PortalConfig } from './config/portal';
+import type { CurrentAccount, PortalConfig as PortalConfigType, CurrentPortal } from "../../types/app.dto";
 
 
 interface iProps {
@@ -32,7 +33,7 @@ const Onboard = (props: iProps) => {
       onSetRepo={(repo) => allSetParty(repo, toggleAllSet, props.onSetRepo) }
     /> : allSetView()
   }
-}
+};
 
 const allSetView = () => {
   return <div className="flex justify-center pt-10 mt-10 text-bold">
@@ -42,15 +43,15 @@ const allSetView = () => {
       <p className="font-extrabold text-white text-3xl tracking-wider">Config done! All set for sync.</p>
     </div>
   </div>
-}
+};
 
 const allSetParty = (repo, toggleAllSet, onSetRepo) => {
   toggleAllSet(true);
   window.setTimeout(() => {
     onSetRepo(repo);
   }, 4000);
-}
+};
 
 export {
   Onboard
-}
+};

@@ -5,7 +5,7 @@ const INTERNAL_APIS = {
  PORTAL: (portalId: string) => `/api/_/portals/${portalId}`,
  THEME: (themeId: string) => `/api/_/portal-templates/${themeId}`,
  PAGES: (themeId: string, page: string) => `/api/_/portal-templates/${themeId}/pages/${page}`,
-}
+};
 
 const THEME_OBJ_EXCLUDABLES = ['content_type', 'created_at', 'custom_css', 'footer', 'head', 'header', 'id', 'is_active', 'layout', 'name', 'portal_id', 'reference', 'reference_type', 'updated_at'];
 const LAYOUTS = ['custom_css', 'layout', 'head', 'header', 'footer'];

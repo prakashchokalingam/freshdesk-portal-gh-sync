@@ -17,9 +17,8 @@ class ThemeCommitTree {
     private readonly repo: string,
     private readonly baseTree: string,
     private readonly themeId: string,
-    private readonly tree: Tree[] = []
-  ) {
-  }
+    private readonly tree: Tree[] = [],
+  ) {}
 
 
   public add(path: string, content: any) {
@@ -43,4 +42,4 @@ class ThemeCommitTree {
 
 export {
   ThemeCommitTree
-}
+};

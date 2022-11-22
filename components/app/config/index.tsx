@@ -1,8 +1,10 @@
-import type { CurrentAccount, CurrentPortal, PortalConfig as PortalConfigType } from "../../../types/app.dto"
-import { PortalConfig } from "./portal"
-import { TokenConfig } from "./token";
 import { useEffect, useState } from "react";
-import { Storage } from "@plasmohq/storage"
+import { Storage } from "@plasmohq/storage";
+
+import { PortalConfig } from "./portal";
+import { TokenConfig } from "./token";
+import type { CurrentAccount, CurrentPortal, PortalConfig as PortalConfigType } from "../../../types/app.dto";
+
 
 interface iProps {
   currentAccount: CurrentAccount;
@@ -49,16 +51,16 @@ const Config = (props: iProps) => {
       }}
     />
   </div>
-}
+};
 
 const getRepoInfo = async (portalId: string, setRepoOwner, setRepoName) => {
   const storage = new Storage();
   const portalConfig: PortalConfigType = await storage.get(portalId);
   setRepoOwner(portalConfig.owner);
   setRepoName(portalConfig.repo);
-}
+};
 
 
 export {
   Config
-}
+};

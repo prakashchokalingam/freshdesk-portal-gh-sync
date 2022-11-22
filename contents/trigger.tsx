@@ -12,15 +12,15 @@ export const config: PlasmoContentScript = {
 }
 
 export const getInlineAnchor: PlasmoGetInlineAnchor = () =>
-  document.querySelector(".footer-wrapper > .footer button:first-child")
+  document.querySelector(".footer-wrapper > .footer button:first-child");
 
 
-export const getShadowHostId = () => "fd-sync-trigger"
+export const getShadowHostId = () => "fd-sync-trigger";
 
 export const getStyle = () => {
-  const style = document.createElement("style")
-  style.textContent = cssText
-  return style
+  const style = document.createElement("style");
+  style.textContent = cssText;
+  return style;
 }
 
 
@@ -32,11 +32,11 @@ const Trigger = () => {
       <span> Sync to Github </span>
     </button>
   </div>
-}
+};
 
 const openApp = () => {
   // Send events to app content
   document.dispatchEvent(new CustomEvent(TRIGGER_FD_GH_SYNC_APP));
-}
+};
 
-export default Trigger
+export default Trigger;

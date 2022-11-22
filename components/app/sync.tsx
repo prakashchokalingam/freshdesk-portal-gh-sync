@@ -1,12 +1,12 @@
-import { Octokit } from "@octokit/rest";
 import { useEffect, useReducer, useState } from "react";
+import { Octokit } from "@octokit/rest";
+import Confetti from 'react-confetti';
+
 import { INTERNAL_APIS, LAYOUTS, PAGES, THEME_OBJ_EXCLUDABLES } from "~constants";
 import { ThemeCommitTree } from "~helpers/commit-tree";
-import type { CurrentAccount, CurrentPortal, PortalConfig } from "../../types/app.dto";
-
-import Confetti from 'react-confetti';
 import done from "data-base64:~assets/done.svg";
 import error from "data-base64:~assets/error.svg";
+import type { CurrentAccount, CurrentPortal, PortalConfig } from "../../types/app.dto";
 
 interface iProps {
   currentAccount: CurrentAccount;
@@ -41,7 +41,7 @@ const reducer = (state, action: CommitState) => {
     case commitStates.ERROR:
       return { type: action.type };
   }
-}
+};
 
 const Sync = (props: iProps) => {
   const [currentTheme, setCurrentTheme] = useState<any>();
@@ -100,12 +100,12 @@ const Sync = (props: iProps) => {
         <div className="text-center">
           <img src={error} className="inline-block mb-5" />
           <p className="font-extrabold text-white text-3xl tracking-wider">Sync failed!</p>
-          <p className="font-extrabold text-white text-xl tracking-wider"> Please check the given token has valid permissions to the given repo.</p>
+          <p className="font-extrabold text-white text-xl tracking-wider mt-5"> Please check the given token has valid permissions to the given repository.</p>
         </div>
       </div>
     }
   </div>
-}
+};
 
 const Loader = () => {
   return <div className="inline-block">
@@ -114,7 +114,7 @@ const Loader = () => {
       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
     </svg>
   </div>
-}
+};
 
 
 const fetchTheme = async (themeId: string, setCurrentTheme) => {
@@ -122,7 +122,7 @@ const fetchTheme = async (themeId: string, setCurrentTheme) => {
     portal_template: theme
   } = await fetch(INTERNAL_APIS.THEME(themeId)).then(res => res.json());
   setCurrentTheme(theme);
-}
+};
 
 const commit = async (theme: any, currentTokenConfig: string, currentPortalConfig: PortalConfig, commitMsg, dispatch) => {
   try {
@@ -176,7 +176,7 @@ const commit = async (theme: any, currentTokenConfig: string, currentPortalConfi
     console.log(e);
     dispatch({ type: commitStates.ERROR, error: e });
   }
-}
+};
 
 const getTree = async (theme: any, owner: string, repo: string, baseTree: string, dispatch) => {
   // construct theme files tree
@@ -216,8 +216,8 @@ const getTree = async (theme: any, owner: string, repo: string, baseTree: string
   }
 
   return commitTree.get();
-}
+};
 
 export {
   Sync
-}
+};

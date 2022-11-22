@@ -31,7 +31,7 @@ Provide config settings like github access token and repository details to perfo
 
 <table>
 <tr>
- <td>Ensure the token has access to commit changes on the default branch of the given repo.</td>
+ <td>Ensure the token has access to commit changes on the default branch of the given repository.</td>
  <td><img width="1536" alt="gh-token" src="https://user-images.githubusercontent.com/5512765/203077325-5a11c920-05be-49d0-9637-f88d553eb6d9.png"></td>
 </tr>
 <tr>
